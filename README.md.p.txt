@@ -21,7 +21,7 @@ I have architected a Hub-and-Spoke model to centralize communication while maint
 * **Sensitivity Labels:** Applied "Highly Confidential" labels to the HR site.
 * **DLP Policy:** Created a tenant-wide policy to block PII (Credit Cards/SSNs) from being shared via WhatsApp or External Email.
 
-### 🛡️ Data-Centric Security (The "No Folders" Strategy)
+###  Data-Centric Security (The "No Folders" Strategy)
 In the **Yahdi Tech** HR Department, I implemented a "Flat" file structure rather than traditional folders. 
 
 * **The Challenge:** Folders create "silos" and security often breaks if a file is moved.
@@ -35,3 +35,10 @@ Goal: Secure the HR Department using Zero-Trust principles.
 Implementation: Configured a Conditional Access Policy that triggers an MFA (Multi-Factor Authentication) requirement whenever a user attempts to access SharePoint resources.
 Logic: Verify Explicitly. Even with a correct password, the user must provide a secondary "Identity Proof" (Microsoft Authenticator app).
 
+Identity Redundancy:
+I have implemented a dual-admin strategy to prevent "Admin Lockout":
+
+Primary Admin: Enforced with Strict Conditional Access and MFA for daily operations.
+
+Emergency Access (Break-Glass): A cloud-only Global Admin account excluded from all Conditional Access policies.
+Security Control: The Break-Glass password is 32 characters and stored in a "Digital Vault" (documented for the lab). Any sign-in from this account triggers a Priority 1 Alert in the security logs.
