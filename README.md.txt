@@ -20,3 +20,11 @@ I have architected a Hub-and-Spoke model to centralize communication while maint
 ## Security & DLP
 * **Sensitivity Labels:** Applied "Highly Confidential" labels to the HR site.
 * **DLP Policy:** Created a tenant-wide policy to block PII (Credit Cards/SSNs) from being shared via WhatsApp or External Email.
+
+### 🛡️ Data-Centric Security (The "No Folders" Strategy)
+In the **Yahdi Tech** HR Department, I implemented a "Flat" file structure rather than traditional folders. 
+
+* **The Challenge:** Folders create "silos" and security often breaks if a file is moved.
+* **The Solution:** I applied **Information Protection** directly to the data. 
+* **The Proof:** Even with a sensitive file (Credit Card) sitting in the root directory, my **Sensitivity Labels** and **DLP** successfully identified, encrypted, and governed the data.
+* **Evidence:** See `Flat-Architecture-Security.png` in the repository.
