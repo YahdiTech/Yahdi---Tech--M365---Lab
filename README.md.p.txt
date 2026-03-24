@@ -49,3 +49,10 @@ Primary Admin: Configured with Permanent Active Global Admin rights for efficien
 Just-In-Time (JIT) Logic: In a production environment, this would be "Eligible" only, but for lab agility, I have prioritized a stable "Active" state.
 
 Break-Glass: The EmergencyAdmin account remains "Active" and excluded from MFA policies to ensure 100% tenant availability.
+
+Identity Telemetry & Incident Response:
+Logic: Engineered a KQL (Kusto Query Language) monitoring script to provide real-time visibility into "Break-Glass" account authentication.
+
+Query Design: The script filters for the EmergencyAdmin UPN and projects critical metadata (Time, IP Address, Result) for rapid forensic analysis.
+
+Agility: Demonstrated the ability to manage and audit cloud security infrastructure via a mobile administrative interface.
