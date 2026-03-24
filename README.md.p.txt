@@ -42,3 +42,10 @@ Primary Admin: Enforced with Strict Conditional Access and MFA for daily operati
 
 Emergency Access (Break-Glass): A cloud-only Global Admin account excluded from all Conditional Access policies.
 Security Control: The Break-Glass password is 32 characters and stored in a "Digital Vault" (documented for the lab). Any sign-in from this account triggers a Priority 1 Alert in the security logs.
+
+Identity Management Strategy:
+Primary Admin: Configured with Permanent Active Global Admin rights for efficient lab development.
+
+Just-In-Time (JIT) Logic: In a production environment, this would be "Eligible" only, but for lab agility, I have prioritized a stable "Active" state.
+
+Break-Glass: The EmergencyAdmin account remains "Active" and excluded from MFA policies to ensure 100% tenant availability.
