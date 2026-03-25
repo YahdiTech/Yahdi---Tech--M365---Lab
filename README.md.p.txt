@@ -56,3 +56,12 @@ Logic: Engineered a KQL (Kusto Query Language) monitoring script to provide real
 Query Design: The script filters for the EmergencyAdmin UPN and projects critical metadata (Time, IP Address, Result) for rapid forensic analysis.
 
 Agility: Demonstrated the ability to manage and audit cloud security infrastructure via a mobile administrative interface.
+
+ Windows Endpoint Compliance
+Goal: Enforce a "Zero-Trust" hardware standard for all corporate workstations.
+Implementation: Created a Windows 11 Compliance Baseline in Microsoft Intune.
+Enforced Controls:
+Data-at-Rest Protection: Mandatory BitLocker encryption.
+Threat Protection: Required active Windows Firewall and Microsoft Defender Antimalware states.
+Identity Security: Enforced an 8-character alphanumeric password complexity requirement.
+Logic: Any device falling below this security bar is marked "Non-compliant" and automatically gated from accessing SharePoint and Entra ID resources.
